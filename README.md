@@ -1,19 +1,24 @@
-# Outcome prediction for SENIOR trial patients receiving chemotherapy
+# Outcome prediction for elderly heand&neck cancer patients receiving chemotherapy
 
-Framework to train and validate two models for outcome prediction: an artficial neural network (ANN) and an extreme gradient boosting (XGB).
+Framework to train and validate an artficial neural network (ANN) for the prediction of progression-free-survival (PFS) or overall survival (OS).
 
 Elia Lombardo
-LMU Munich
+
+Department of Radiation Oncology, LMU University Hospital, LMU Munich, Germany
+
 [Elia.Lombardo@med.uni-muenchen.de](mailto:Elia.Lombardo@med.uni-muenchen.de)
 
 ## Installation
 
 * Download and unzip the repository to a local folder of your preference.
 * Build a Docker image based on the provided `Dockerfile` and `requirements.txt` and run a container while mounting the `chemo_outcome_prediction` folder.
-* Move the dataset file called `data_train_val.xlsx` into the `data` subfolder.
+* Move your dataset excel file into the `data` subfolder.
 
 ## Usage
 
 * Open `chemo_outcome_prediction/code/config.py` and change `path_project` to the path inside the container where `chemo_outcome_prediction` was mounted.
-* Start a hyper-parameter grid search directly from the terminal by running `bash main_grid_search.sh ANN` or `bash main_grid_search.sh XGB` for the ANN and XGB model, respectively. The second input argument can be used to specify the prediction endpoint, OS or PFS are available.
-* SHAP explainability analysis included in the `main_infer` scripts.
+* Modify also other variables such as the excel filename of your data etc. as needed in `chemo_outcome_prediction/code/config.py`.
+* Start a hyper-parameter grid search directly from the terminal by running for instance `bash main_grid_search.sh ANN OS` or `bash main_grid_search.sh ANN PFS` for training the ANN for PFS and OS, respectively.
+* Perfom inference by setting the endpoint and model in the `main_infer_ANN.py` script. 
+	* Trained model weights for OS and PFS can be found under `chemo_outcome_prediction/results/training/ANN`
+	* SHAP explainability analysis included 
