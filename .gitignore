@@ -1,0 +1,6 @@
+*.xlsx#
+*.pyc
+*.json
+*.png
+/.neptune
+/code/.neptune
