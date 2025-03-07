@@ -1,4 +1,4 @@
-# Outcome prediction for elderly heand&neck cancer patients receiving chemotherapy
+# Outcome prediction for elderly head&neck cancer patients receiving chemotherapy
 
 Framework to train and validate an artficial neural network (ANN) for the prediction of progression-free-survival (PFS) or overall survival (OS).
 
