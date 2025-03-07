@@ -2,11 +2,12 @@
 
 Framework to train and validate an artficial neural network (ANN) for the prediction of progression-free-survival (PFS) or overall survival (OS).
 
-Elia Lombardo
+Elia Lombardo and Sebastian Marschner
 
 Department of Radiation Oncology, LMU University Hospital, LMU Munich, Germany
 
 [Elia.Lombardo@med.uni-muenchen.de](mailto:Elia.Lombardo@med.uni-muenchen.de)
+[Sebastian.Marschner@med.uni-muenchen.de](mailto:Sebastian.Marschner@med.uni-muenchen.de)
 
 ## Installation
 
@@ -22,3 +23,7 @@ Department of Radiation Oncology, LMU University Hospital, LMU Munich, Germany
 * Perfom inference by setting the endpoint and model in the `main_infer_ANN.py` script. 
 	* Trained model weights for OS and PFS can be found under `chemo_outcome_prediction/results/training/ANN`
 	* SHAP explainability analysis included 
+
+## Publication
+If you use this code in a scientific publication, please cite our paper: 
+https:xxx
